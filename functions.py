@@ -59,6 +59,10 @@ def fullName(first, middle, last):
 # -- function packing and unpacking Arguments *Args --
 # ----------------------------------------------------
 
+
+# *args allows a function to accept any number of positional arguments. Inside the function, args is a tuple containing all extra positional arguments passed.
+# packed as a tuple
+
 # print(1,2,3)
 myList = [1, 2, 3]
 # print(myList)
@@ -102,5 +106,49 @@ def say_hello(name, age, country="Unknown"):
     print(f"Hello {name}, your age is {age}, and your country is {country}")
 
 
-say_hello("Mostafa", 40, "Egypt")
-say_hello("Mohamed", 30)
+# say_hello("Mostafa", 40, "Egypt")
+# say_hello("Mohamed", 30)
+
+# =====================================================================================
+
+# ---------------------------------------------------------------------
+# -- Function Packing Unpacking Keyword Arguments **KWArgs --
+# ---------------------------------------------------------------------
+
+# **kwargs allows a function to accept any number of keyword arguments. Inside the function, kwargs is a dictionary containing all extra named arguments.
+# packed as a dict
+
+def show_skills(*skills):
+    print(type(skills))  # tuple
+    for skill in skills:
+        print(skill)
+
+
+# show_skills("Js", "Py", "MySQL")
+
+
+# def show_skills(**skills):
+#     print(type(skills))  # dict
+#     # print(skills)
+#     for skill, value in skills.items():
+#         print(f"{skill} => {value}")
+
+
+# show_skills(Js="80%", Py="75%", MySQL="67%")
+
+
+
+mySkills = {"Js": "80%", "Py": "75%", "MySQL": "67%"}
+
+def show_skills(**skills):
+    print(type(skills))  # dict
+    # print(skills)
+    for skill, value in skills.items():
+        print(f"{skill} => {value}")
+
+
+# print(mySkills)
+# show_skills(mySkills) # Error
+# show_skills(**mySkills) # unpack the dict
+
+
