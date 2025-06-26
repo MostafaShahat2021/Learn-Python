@@ -88,10 +88,19 @@ def show_details(name, *skills):
         print(skill)
 
 
-show_details("Mostafa", "Html", "Css", "Js", "Python")
+# show_details("Mostafa", "Html", "Css", "Js", "Python")
 
 # ======================================================================================
 
 # ----------------------------------------------------
 # -- Function Default Parameters --
 # ----------------------------------------------------
+
+
+# if your function has only one defualt parameter it should be the last
+def say_hello(name, age, country="Unknown"):
+    print(f"Hello {name}, your age is {age}, and your country is {country}")
+
+
+say_hello("Mostafa", 40, "Egypt")
+say_hello("Mohamed", 30)
