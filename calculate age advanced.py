@@ -3,7 +3,7 @@
 # ---------------------------------------------------
 
 
-# Iput Note
+# Input Note
 print("#" * 80)
 print(" <= Welcome to Age Calculator => ".title().center(80, "#"))
 print(" You can write the first letter or full name of the time unit ".center(80, "#"))
